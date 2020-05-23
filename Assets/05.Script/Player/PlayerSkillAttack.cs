@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(CheckUsingCasting))]
+[RequireComponent(typeof(HitBox))]
 public class PlayerSkillAttack : MonoBehaviour
 {
     public Transform firePos;
     public GameObject[] skillEffect;
     public TrailRenderer bladeTrail;
     private PlayerMovement movement;
-    public CheckUsingCasting check;
+    public HitBox check;
 
     private GameObject temp;
     public float width;
@@ -17,7 +17,7 @@ public class PlayerSkillAttack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        check = GetComponent<CheckUsingCasting>();
+        check = GetComponent<HitBox>();
         movement = GetComponent<PlayerMovement>();
         bladeTrail.enabled = false;
         for(int i = 0; i < skillEffect.Length; i++)

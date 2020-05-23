@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(NavAgentCtrl))]
 [RequireComponent(typeof(NormalHealthCtrl))]
 [RequireComponent(typeof(FOV))]
-[RequireComponent(typeof(CheckUsingCasting))]
+[RequireComponent(typeof(HitBox))]
 public class EnemyAI : MonoBehaviour
 {
     public enum State { STOP, TRACE, ATTACK, DIE }
@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     protected Transform playerTr;
     protected Rigidbody rb;
     protected FOV fov;
-    protected CheckUsingCasting check;
+    protected HitBox check;
     protected bool CanAtk = true;
 
 
@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         fov = GetComponent<FOV>();
-        check = GetComponent<CheckUsingCasting>();
+        check = GetComponent<HitBox>();
         nav._Awake();
 
         rb.isKinematic = true;

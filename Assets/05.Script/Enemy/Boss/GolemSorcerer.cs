@@ -6,7 +6,7 @@ using UniRx;
 
 [RequireComponent(typeof(FOV))]
 
-[RequireComponent(typeof(CheckUsingCasting))]
+[RequireComponent(typeof(HitBox))]
 
 [RequireComponent(typeof(NavAgentCtrl))]
 [RequireComponent(typeof(Rigidbody))]
@@ -22,7 +22,7 @@ public class GolemSorcerer : MonoBehaviour
     private Animator animator;
     private Transform playerTr;
     private CapsuleCollider capsule;
-    private CheckUsingCasting check;
+    private HitBox check;
     private WaitForSeconds ws;
     private Rigidbody rb;
 
@@ -41,7 +41,7 @@ public class GolemSorcerer : MonoBehaviour
         nav = GetComponent<NavAgentCtrl>();
         health = GetComponent<HealthControl>();
         animator = GetComponent<Animator>();
-        check = GetComponent<CheckUsingCasting>();
+        check = GetComponent<HitBox>();
         capsule = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");

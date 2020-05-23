@@ -15186,3 +15186,17 @@ Assets/01.Animation/Enemy/[Normal]ForestGolem.controller
 Assets/01.Animation/Enemy/[Normal]ShellSlime.controller
 Assets/01.Animation/Enemy/[Normal]Slime.controller
 *.controller
+*.dll
+*.pdb
+*.stamp
+*.bin
+Library/Artifacts/1e/1e8df3c7375d6c56efddc38e10f5b758
+Library/Artifacts/20/20b0df1df151e06357108e44ee49928c
+Library/Artifacts/2c/2c19fc3dcc50d9d1ca01565887266b4c
+Library/Artifacts/6d/6d507655654231b2f4fb8d647f610382
+Library/Artifacts/8c/8c531a4d244ec09116cabf023a842173
+Library/Artifacts/bb/bba33b97b107e2c91b578adc8de15bdf
+Library/Artifacts/c6/c6c16ae59b21ff579caef355fa36602e
+Library/Artifacts/c7/c73fb3b6c616ba4ea0364eea64b86d17
+Library/Artifacts/c8/c8a3239f1b6da5b5bd6a2f7f2aad4460
+*.zip

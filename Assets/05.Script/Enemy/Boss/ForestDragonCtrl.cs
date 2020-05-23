@@ -6,7 +6,7 @@ using UniRx;
 [RequireComponent(typeof(NavAgentCtrl))]
 [RequireComponent(typeof(BossHealthCtrl))]
 [RequireComponent(typeof(FOV))]
-[RequireComponent(typeof(CheckUsingCasting))]
+[RequireComponent(typeof(HitBox))]
 public class ForestDragonCtrl : MonoBehaviour
 {
     public ParticleSystem flame;
@@ -28,7 +28,7 @@ public class ForestDragonCtrl : MonoBehaviour
     private Animator animator;
     private Transform playerTr;
     private CapsuleCollider capsule;
-    private CheckUsingCasting check;
+    private HitBox check;
     private Rigidbody rb;
     private RaycastHit[] hits;
 
@@ -50,7 +50,7 @@ public class ForestDragonCtrl : MonoBehaviour
         nav = GetComponent<NavAgentCtrl>();
         health = GetComponent<HealthControl>();
         animator = GetComponent<Animator>();
-        check = GetComponent<CheckUsingCasting>();
+        check = GetComponent<HitBox>();
         capsule = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");

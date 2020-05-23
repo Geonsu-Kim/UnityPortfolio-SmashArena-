@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHealth : HealthControl
 {
-    private PlayerMovement ctrl;
+    private PlayerMovement movement;
     private WaitForSeconds ws;
 
     private int curGuardGauge;
@@ -18,7 +18,7 @@ public class PlayerHealth : HealthControl
     {
         base.Awake();
         curGuardGauge = maxGuardGauge;
-        ctrl = GetComponent<PlayerMovement>();
+        movement = GetComponent<PlayerMovement>();
         ws = new WaitForSeconds(0.1f);
         StartCoroutine(GuardGauge());
         hpText.text = string.Format("{0}/{1}", curHp.ToString(), maxHp.ToString());
@@ -26,7 +26,7 @@ public class PlayerHealth : HealthControl
     }
     public override void Damaged(int damage)
     {
-        if (!ctrl.Block)
+        if (!movement.Block)
         {
             curHp -= damage;
             if (CurHpRatio() < 0.2f)
@@ -84,7 +84,7 @@ public class PlayerHealth : HealthControl
         {
             if(curGuardGauge< maxGuardGauge)
             {
-                if (!ctrl.Block)
+                if (!movement.Block)
                 {
                     curGuardGauge += 1;
                     GuardBar.fillAmount = (float)curGuardGauge / (float)maxGuardGauge;

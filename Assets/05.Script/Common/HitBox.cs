@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckUsingCasting : MonoBehaviour
+public class HitBox : MonoBehaviour
 {
     private GameObject temp;
     public RaycastHit[] hits;
